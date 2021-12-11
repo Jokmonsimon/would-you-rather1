@@ -32,14 +32,14 @@ const NewQuestion = ({ user, history }) => {
     if (!values.optionOneText || values.optionOneText.trim() === "") {
       setError({
         ...error,
-        optionOneText: "Option one text is required.",
+        optionOneText: "This field is required.",
       });
       return;
     }
     if (!values.optionTwoText || values.optionTwoText.trim() === "") {
       setError({
         ...error,
-        optionTwoText: "Option two text is required.",
+        optionTwoText: "This field is required.",
       });
       return;
     }
@@ -55,47 +55,39 @@ const NewQuestion = ({ user, history }) => {
     <div className="main__container">
       <div className="content">
         <div className="heading">Create New Qestion</div>
-        <div className="align-left">
-          <form onSubmit={onSubmit}>
-            <div className="bold pt-2 pb-2">Would you rather ...</div>
-            <div style={{ textAlign: "center" }}>
-              <div className="form-group">
-                <input
-                  type="text"
-                  className="form-control"
-                  placeholder="Enter option one"
-                  name="optionOneText"
-                  onChange={(event) => onChange(event)}
-                />
-              </div>
-              {error.optionOneText && (
-                <div className="text-danger align-left">
-                  {error.optionOneText}
-                </div>
-              )}
-              <div className="mb-3 mt-3">OR</div>
-              <div className="form-group">
-                <input
-                  type="text"
-                  className="form-control"
-                  placeholder="Enter option two"
-                  name="optionTwoText"
-                  onChange={(event) => onChange(event)}
-                />
-              </div>
-              {error.optionTwoText && (
-                <div className="text-danger align-left">
-                  {error.optionTwoText}
-                </div>
-              )}
-              <div className="mt-2">
-                <button className="btn btn-primary w-100" disabled={requesting}>
-                  {requesting ? <div className="spinner-border" /> : "Submit"}
-                </button>
-              </div>
+        <form onSubmit={onSubmit}>
+          <div className="would__you">Would you rather ...</div>
+          <div>
+            <div className="form-group">
+              <input
+                type="text"
+                className="form-control"
+                placeholder="Enter option one"
+                name="optionOneText"
+                onChange={(event) => onChange(event)}
+              />
             </div>
-          </form>
-        </div>
+            {error.optionOneText && (
+              <div className="warning">{error.optionOneText}</div>
+            )}
+            <div className="would__you">OR</div>
+            <div className="form-group">
+              <input
+                type="text"
+                className="form-control"
+                placeholder="Enter option two"
+                name="optionTwoText"
+                onChange={(event) => onChange(event)}
+              />
+            </div>
+            {error.optionTwoText && (
+              <div className="warning">{error.optionTwoText}</div>
+            )}
+            <button className="submit__button" disabled={requesting}>
+              {requesting ? <div className="spinner-border" /> : "Submit"}
+            </button>
+          </div>
+        </form>
       </div>
     </div>
   );

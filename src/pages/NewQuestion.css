@@ -1,28 +1,49 @@
 .main__container {
-    background-color: whitesmoke;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 70px;
-  }
-  
-  .content {
-    background-color: white;
-    width: 600px;
-    height: fit-content;
-    display: flex;
-    flex-direction: column;
-    border: 1px solid lightblue;
-    border-radius: 5px;
-    padding: 30px;
-    align-items: center;
-  }
+  background-color: whitesmoke;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 70px;
+}
 
-  .heading {
-      background-color: rgb(7, 168, 7);
-      border: 1px solid darkgreen;
-      border-radius: 5px;
-      padding: 10px;
-  }
-  
+.content {
+  background-color: white;
+  width: 600px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid lightblue;
+  border-radius: 5px;
+  padding: 30px;
+  align-items: center;
+}
+
+.heading {
+  background-color: rgb(7, 100, 7);
+  border: 1px solid darkgreen;
+  border-radius: 5px;
+  padding: 10px;
+  color: white;
+  font-weight: 650;
+  margin-bottom: 20px;
+}
+
+.would__you {
+  margin-bottom: 14px;
+  margin-top: 14px;
+  font-weight: 650;
+}
+
+.warning {
+  color: red;
+}
+
+.submit__button {
+  color: white;
+  background-color: darkgreen;
+  text-align: center;
+  font-weight: 650;
+  margin-top: 15px;
+  margin-left: 80px;
+}
