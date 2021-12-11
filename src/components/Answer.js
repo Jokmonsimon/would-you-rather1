@@ -1,4 +1,5 @@
 import React from "react";
+import "./Answer.css";
 import PropTypes from "prop-types";
 
 const Answer = ({ question, voters, user }) => {
@@ -14,7 +15,7 @@ const Answer = ({ question, voters, user }) => {
     voters > 0 ? Math.floor((option.votes.length / voters) * 100) : 0;
 
   return (
-    <div>
+    <div className="">
       <div
         className="border p-3 mb-3"
         style={{
