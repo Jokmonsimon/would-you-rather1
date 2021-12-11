@@ -36,7 +36,7 @@ const Login = ({ history, location }) => {
       <div className="login__container">
         <h3>Hello, welcome to this Game!</h3>
         <h5>
-          To play, Select User or <Link to="/register">Create Account</Link>
+          Select User or <Link to="/register">Create Account</Link> to Play
         </h5>
         <Dropdown>
           <Dropdown.Toggle

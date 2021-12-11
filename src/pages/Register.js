@@ -64,7 +64,7 @@ const Register = ({ history }) => {
           <img
             className="player__image"
             src={image ? image : "images/player.png"}
-            alt="Player Image"
+            alt=""
           />
         </label>
         <input

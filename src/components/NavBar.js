@@ -14,7 +14,7 @@ const NavBar = ({ user, location }) => {
     <Navbar
       collapseOnSelect
       expand="lg"
-      bg="primary"
+      bg="secondary"
       variant="dark"
       fixed="top"
     >
