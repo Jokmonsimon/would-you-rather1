@@ -37,7 +37,7 @@ const Question = ({ match, user }) => {
   };
 
   return (
-    <div className="main-content">
+    <div className="home__container">
       {isEmpty(question) ? (
         <NotFound label="Poll not found" />
       ) : (
