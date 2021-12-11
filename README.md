@@ -4,6 +4,8 @@
 
 It also allows a user to submit new questions. The users enters option A and option B of the question. Empty questions are not allowed. The user can also view the scores from all members on leaderboard.
 
+## Acknowledgement
+
 Thank you very much Qadriyah for your assistant and contributuion to this project. It would have been impossible without your work.
 
 ## Prerequisites
