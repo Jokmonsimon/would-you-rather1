@@ -1,8 +1,8 @@
 import React from "react";
+import "./NewQuestion.css";
 import serializeForm from "form-serialize";
 import { useDispatch, useSelector } from "react-redux";
 import PropTypes from "prop-types";
-
 import { saveQuestion } from "../redux/actions/question";
 
 const NewQuestion = ({ user, history }) => {
@@ -52,58 +52,50 @@ const NewQuestion = ({ user, history }) => {
   };
 
   return (
-    <div className="main-content">
-      <div
-        className="bold p-3 rounded-top"
-        style={{
-          borderBottom: "solid 1px rgba(0, 0, 0, 0.15)",
-          backgroundColor: "#f2f2f2",
-          margin: "-9px",
-        }}
-      >
-        Create New Qestion
-      </div>
-      <div className="align-left">
-        <form onSubmit={onSubmit}>
-          <div className="pb-2 pt-4">Complete the question</div>
-          <div className="bold pt-2 pb-2">Would you rather ...</div>
-          <div style={{ textAlign: "center" }}>
-            <div className="form-group">
-              <input
-                type="text"
-                className="form-control"
-                placeholder="Enter option one"
-                name="optionOneText"
-                onChange={(event) => onChange(event)}
-              />
-            </div>
-            {error.optionOneText && (
-              <div className="text-danger align-left">
-                {error.optionOneText}
+    <div className="main__container">
+      <div className="content">
+        <div className="heading">Create New Qestion</div>
+        <div className="align-left">
+          <form onSubmit={onSubmit}>
+            <div className="bold pt-2 pb-2">Would you rather ...</div>
+            <div style={{ textAlign: "center" }}>
+              <div className="form-group">
+                <input
+                  type="text"
+                  className="form-control"
+                  placeholder="Enter option one"
+                  name="optionOneText"
+                  onChange={(event) => onChange(event)}
+                />
               </div>
-            )}
-            <div className="mb-3 mt-3">OR</div>
-            <div className="form-group">
-              <input
-                type="text"
-                className="form-control"
-                placeholder="Enter option two"
-                name="optionTwoText"
-                onChange={(event) => onChange(event)}
-              />
-            </div>
-            {error.optionTwoText && (
-              <div className="text-danger align-left">
-                {error.optionTwoText}
+              {error.optionOneText && (
+                <div className="text-danger align-left">
+                  {error.optionOneText}
+                </div>
+              )}
+              <div className="mb-3 mt-3">OR</div>
+              <div className="form-group">
+                <input
+                  type="text"
+                  className="form-control"
+                  placeholder="Enter option two"
+                  name="optionTwoText"
+                  onChange={(event) => onChange(event)}
+                />
               </div>
-            )}
-            <div className="mt-2">
-              <button className="btn btn-primary w-100" disabled={requesting}>
-                {requesting ? <div className="spinner-border" /> : "Submit"}
-              </button>
+              {error.optionTwoText && (
+                <div className="text-danger align-left">
+                  {error.optionTwoText}
+                </div>
+              )}
+              <div className="mt-2">
+                <button className="btn btn-primary w-100" disabled={requesting}>
+                  {requesting ? <div className="spinner-border" /> : "Submit"}
+                </button>
+              </div>
             </div>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
     </div>
   );
