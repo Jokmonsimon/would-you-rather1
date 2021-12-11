@@ -1,0 +1,7 @@
+.body__content {
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    border: 1px solid lightblue;
+    margin-bottom: 10px;
+}

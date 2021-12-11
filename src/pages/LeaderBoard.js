@@ -1,4 +1,5 @@
 import React from "react";
+import "./LeaderBoard.css";
 import { useSelector } from "react-redux";
 
 import ScoreCard from "../components/ScoreCard";
@@ -23,12 +24,14 @@ const LeaderBoard = () => {
   const { loading } = useSelector((state) => state.questions);
 
   return (
-    <div className="main-content">
-      {loading ? (
-        <div className="spinner-border" />
-      ) : (
-        users.map((user) => <ScoreCard key={user.id} user={user} />)
-      )}
+    <div className="leaderboard__container">
+        <div className="content">
+          {loading ? (
+            <div className="spinner-border" />
+          ) : (
+            users.map((user) => <ScoreCard key={user.id} user={user} />)
+          )}
+      </div>
     </div>
   );
 };

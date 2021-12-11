@@ -18,7 +18,8 @@ const Home = ({ user }) => {
   const { loading } = useSelector((state) => state.questions);
 
   return (
-    <div className="container">
+    <div className="home__container">
+      <div className="content">
       {loading ? (
         <div className="spinner-border" />
       ) : (
@@ -69,6 +70,7 @@ const Home = ({ user }) => {
           </Tab>
         </Tabs>
       )}
+      </div>
     </div>
   );
 };

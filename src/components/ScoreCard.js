@@ -1,10 +1,11 @@
 import React from "react";
+import "./ScoreCard.css";
 import PropTypes from "prop-types";
 
 const ScoreCard = ({ user }) => {
   return (
     <div
-      className="d-flex flex-row border mb-3 align-left"
+      className="body__content"
       style={{ borderRadius: "10px", alignItems: "center" }}
     >
       <div className="p-4">
@@ -29,7 +30,7 @@ const ScoreCard = ({ user }) => {
           className="d-flex flex-row mb-2 mt-2 pb-3"
           style={{ borderBottom: "solid thin rgba(0, 0, 0, 0.15)" }}
         >
-          <div className="flex-fill">Answered questions</div>
+          <div className="flex-fill">Answered questions </div>
           <div>{user.totalAnswered}</div>
         </div>
         <div className="d-flex flex-row mb-2 mt-2">
