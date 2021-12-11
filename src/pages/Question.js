@@ -38,17 +38,19 @@ const Question = ({ match, user }) => {
 
   return (
     <div className="home__container">
-      {isEmpty(question) ? (
-        <NotFound label="Poll not found" />
-      ) : (
-        <Poll
-          question={question}
-          author={author}
-          answered={answered}
-          user={user}
-          questionId={question_id}
-        />
-      )}
+      <div className="content">
+        {isEmpty(question) ? (
+          <NotFound label="Poll not found" />
+        ) : (
+          <Poll
+            question={question}
+            author={author}
+            answered={answered}
+            user={user}
+            questionId={question_id}
+          />
+        )}
+      </div>
     </div>
   );
 };
