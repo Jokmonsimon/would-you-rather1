@@ -1,7 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import PropTypes from "prop-types";
-
 import Poll from "../components/Poll";
 import isEmpty from "../utils/isEmpty";
 import NotFound from "../components/404";

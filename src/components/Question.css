@@ -1,0 +1,39 @@
+.main__body {
+  display: flex;
+  flex-direction: column;
+  border: 5px solid lightblue;
+  border-radius: 5px;
+  background-color: rgb(12, 241, 241);
+  margin-bottom: 10px;
+}
+
+.user__asks {
+  padding: 13px;
+  background-color: rgb(144, 177, 238);
+  font-weight: 650;
+}
+
+.questions__content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.player__image {
+  padding: 5px;
+  width: 80px;
+}
+
+.player__box {
+  padding: 13px;
+  border-left: 3px solid lightblue;
+}
+
+.date {
+  font-size: 15px;
+  font-style: italic;
+}
+
+.quiz {
+  font-weight: 650;
+}
